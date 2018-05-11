@@ -1,0 +1,14 @@
+.login{
+    margin-top: 10%;
+    margin-left: 75%;
+}
+
+button[name=singin]{
+    font-weight: bold;
+    color:black;
+}
+
+body{
+    background-image: url('../img/loginScreen.gif');
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
