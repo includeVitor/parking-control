@@ -1,0 +1,22 @@
+
+label[for=welcome]{
+    font-size:xx-large;
+}
+
+#glyphUser{
+    font-size:2.0em;  
+    position: fixed; 
+    color:black;
+    margin-left: 60%;
+}
+#glyphLogOut{
+    font-size: 2.0em;
+    margin-left: 90%;
+    color:black;
+}
+label[for=get-out]{
+    font-size: 25px;
+    font-weight: normal;
+    color:black;
+    position: fixed;
+}

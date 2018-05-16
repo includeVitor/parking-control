@@ -1,17 +1,23 @@
 <?php
 
+include "class\connection.php";
 
 try{
-    $conn = new PDO("mysql:host=localhost;dbname=parking-control", "root", "");
+    
+    $connect = new Connection();
+    $conn = $connect->getConnection();
 
-    $stmt = $conn->prepare("SELECT name,password FROM users where name = ? and password = ?");
+    $stmt = $conn->prepare("SELECT id,name,password FROM users where name = ? and password = ?");
     $stmt->execute(array($_POST['user'],$_POST['password']));
-    $result = $stmt->fetchAll();
+    $result = $stmt->fetch();
 
     if($result){
-        print 'Bem vindo';
+        session_start();
+        $_SESSION['user'] = $result['name'];
+        print "CONCEDED";
+
     }else{
-        print 'Usuário ou senha inválidos';
+        print "NEGATED";
     }
     $conn = null;
 
