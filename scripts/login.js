@@ -1,17 +1,9 @@
-
-
-$(document).ready(function(){
-
-    $('#frmLogin').ajaxForm({
-        type: 'POST',
-        timeout: 10000,
-        success: function(response){
-            if(response == "CONCEDED"){
-                window.location.replace("http://localhost/parking-control/index.php");
-            }
-        },
-        error: function(){
-            console.log('Oops, Ocorreu um erro. ');
-        }
+$(function(){
+    $("#loading").html("<img class='rounded mx-auto d-block' src='img/loading.gif'>");
+    $('#form-signin').submit(function() {
+        
+        setTimeout(function(){ $("#loading").html('final'); }, 3000);
     });
+
+
 });

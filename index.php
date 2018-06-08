@@ -19,7 +19,7 @@ if(!$_SESSION) exit;
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>Estacionamento inteligente</h3>
+                    <h3><a href="\parking-control\index"> Estacionamento inteligente </a></h3>
                     <strong>EI</strong>
                 </div>
                 <ul class="list-unstyled components">
@@ -64,11 +64,10 @@ if(!$_SESSION) exit;
                             Painel do Admnistrador
                         </a>
                         <ul class="collapse list-unstyled" id="admin">
-                            <li><a href="\parking-control\modules\admin-panel\create-customers.php">Cadastrar Usuários</a></li>
-                            <li><a href="#">Consultar Usuários</a></li>
-                            <li><a href="#">Excluir Usuários</a></li>
-                            <li><a href="#">Editar Usuários</a></li>
-                            <li><a href="#">Permissões do Usuário</a></li>
+                            <li><a href="\parking-control\create-users">Cadastrar Usuários</a></li>
+                            <li><a href="\parking-control\consult-users">Consultar Usuários</a></li>
+                            <li><a href="\parking-control\create-access">Cadastrar Acesso</a></li>
+                            <li><a href="\parking-control\consult-access">Consultar Acesso</a></li>
                         </ul>
                     </li>
                     <li>
@@ -95,21 +94,20 @@ if(!$_SESSION) exit;
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                                 <li>
-                                    <a href="#"> <i class="glyphicon glyphicon-log-out"></i>Sair</a>
+                                    <button class="btn btn-primary" id="leave"> <i class="glyphicon glyphicon-log-out"></i>Sair</button>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <?php
-                    $Url[1] = (empty($Url[1]) ? null : $Url[1]);
-                    if(file_exists('C:/xampp/htdocs/parking-control/modules/admin-panel/'.$Url[0].'.php'))
-                       require 'C:/xampp/htdocs/parking-control/modules/admin-panel/'.$Url[0].'.php';
-                ?>
-               <!-- <h2>Cadastrar Usuário</h2>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
--->
+                <div class="index-content">
+                    <?php
+                        $Url[1] = (empty($Url[1]) ? null : $Url[1]);
+                        if(file_exists('C:/xampp/htdocs/parking-control/modules/admin-panel/'.$Url[0].'.php'))
+                        require 'C:/xampp/htdocs/parking-control/modules/admin-panel/'.$Url[0].'.php';
+
+                    ?>
+                </div>
             </div>
         </div>
     </body>

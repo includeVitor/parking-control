@@ -1,0 +1,1 @@
+insert into users (name,password,cpf,phone,access) values ('admin','admin','cpf','phone','access')

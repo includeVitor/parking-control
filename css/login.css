@@ -1,14 +1,23 @@
-.login{
-    margin-top: 10%;
-    margin-left: 75%;
+html,
+body {
+  height: 100%;
 }
 
-button[name=singin]{
-    font-weight: bold;
-    color:black;
+body {
+  display: flex;
 }
 
-body{
-    background-image: url('../img/loginScreen.gif');
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.form-signin{
+    width: 100%;
+    max-width: 350px;
+    padding: 15px;
+    margin:auto;
+}
+
+.form-signin .form-control{
+    padding: 12px;
+}
+
+.form-signin button{
+    margin-top:15px;
 }
