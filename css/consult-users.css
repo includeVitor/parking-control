@@ -1,5 +1,19 @@
-#div-consult-users{
-
+#form-consult-users{
     width: 100%;
+    max-width: 550px;
+    margin:auto;
+}
+.modal-body{
+    width: 100%;
+    max-width: 350px;
+    margin:auto;
+}
+.modal-body span{
+    width:75px;
+}
 
+#table-consult{
+    width: 100%;
+    max-width: 800px;
+    margin:auto;
 }

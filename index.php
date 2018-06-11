@@ -2,14 +2,15 @@
 session_start();
 if(!$_SESSION) exit;
 ?>
-<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>INDEX</title>
+    <title>Estacionamento Inteligente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include 'utils.php'; ?>
+    <link rel="stylesheet" type="text/css" href="\parking-control\libs\fontawesome\web-fonts-with-css\css\fontawesome-all.css">
     <link rel="stylesheet" type="text/css" href="\parking-control\libs\boostrap\css\bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="\parking-control\css\index.css">
     <script src="\parking-control\scripts\index.js"></script>
@@ -19,37 +20,33 @@ if(!$_SESSION) exit;
         <div class="wrapper">
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3><a href="\parking-control\index"> Estacionamento inteligente </a></h3>
+                    <h3><a href="\parking-control\"> Estacionamento inteligente </a></h3>
                     <strong>EI</strong>
                 </div>
                 <ul class="list-unstyled components">
                     <li class="active">
                         <a href="#vehicles-control" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-usd"></i>
+                            <i class="fas fa-car fa-lg"></i>
                             Controle de Veículos
                         </a>
                         <ul class="collapse list-unstyled" id="vehicles-control">
                             <li><a href="#">Cadastro</a></li>
                             <li><a href="#">Consulta</a></li>
-                            <li><a href="#">Exclusão</a></li>
-                            <li><a href="#">Edição</a></li>
                         </ul>
                     </li>
                     <li class="active">
                         <a href="#custumer-control" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-user"></i>
+                            <i class="fas fa-users fa-lg"></i>
                             Controle de Clientes
                         </a>
                         <ul class="collapse list-unstyled" id="custumer-control">
                             <li><a href="#">Cadastro</a></li>
                             <li><a href="#">Consulta</a></li>
-                            <li><a href="#">Exclusão</a></li>
-                            <li><a href="#">Edição</a></li>
                         </ul>
                     </li>
                     <li class="active">
                         <a href="#analytics" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-signal"></i>
+                            <i class="fas fa-chart-bar fa-lg"></i>
                             Analytics
                         </a>
                         <ul class="collapse list-unstyled" id="analytics">
@@ -60,19 +57,17 @@ if(!$_SESSION) exit;
                     </li>
                     <li class="active">
                         <a href="#admin" data-toggle="collapse" aria-expanded="false">
-                            <i class="glyphicon glyphicon-signal"></i>
-                            Painel do Admnistrador
+                            <i class="fas fa-lock fa-lg"></i>
+                            Painel do Admin
                         </a>
                         <ul class="collapse list-unstyled" id="admin">
-                            <li><a href="\parking-control\create-users">Cadastrar Usuários</a></li>
-                            <li><a href="\parking-control\consult-users">Consultar Usuários</a></li>
-                            <li><a href="\parking-control\create-access">Cadastrar Acesso</a></li>
-                            <li><a href="\parking-control\consult-access">Consultar Acesso</a></li>
+                            <li><a href="\parking-control\create-users">Cadastrar</a></li>
+                            <li><a href="\parking-control\consult-users">Consultar</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#">
-                            <i class="glyphicon glyphicon-send"></i>
+                            <i class="fas fa-paper-plane fa-lg"></i>
                             Contato
                         </a>
                     </li>
@@ -85,18 +80,16 @@ if(!$_SESSION) exit;
                     <div class="container-fluid">
 
                         <div class="navbar-header">
-                            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
-                                <i class="glyphicon glyphicon-align-left"></i>
+                            <button type="button" id="sidebarCollapse" class="btn btn-primary navbar-btn">
+                                <i class="fas fa-bars fa-lg"></i>
                                 <span>Menu</span>
                             </button>
                         </div>
-
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <button class="btn btn-primary" id="leave"> <i class="glyphicon glyphicon-log-out"></i>Sair</button>
-                                </li>
-                            </ul>
+                        <div class="navbar-header">
+                            <button type="button" id="leave" class="btn btn-danger navbar-btn" >
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <span>Sair</span>
+                            </button>
                         </div>
                     </div>
                 </nav>
