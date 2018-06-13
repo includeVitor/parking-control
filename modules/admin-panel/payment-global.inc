@@ -1,0 +1,1 @@
+<?php $horista = 10; $mensalista =50; $anista = 250;  ?>

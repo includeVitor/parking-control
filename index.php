@@ -50,9 +50,7 @@ if(!$_SESSION) exit;
                             Analytics
                         </a>
                         <ul class="collapse list-unstyled" id="analytics">
-                            <li><a href="#">Gráfico de Clientes</a></li>
-                            <li><a href="#">Gráfico de Veículos</a></li>
-                            <li><a href="#">Gráfico Clientes X Veículos</a></li>
+                            <li><a href="#">Ainda em Desenvolvimento</a></li>
                         </ul>
                     </li>
                     <li class="active">
@@ -63,10 +61,11 @@ if(!$_SESSION) exit;
                         <ul class="collapse list-unstyled" id="admin">
                             <li><a href="\parking-control\create-users">Cadastrar</a></li>
                             <li><a href="\parking-control\consult-users">Consultar</a></li>
+                            <li><a href="\parking-control\payment">Pagamento</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="\parking-control\contact">
                             <i class="fas fa-paper-plane fa-lg"></i>
                             Contato
                         </a>
@@ -106,6 +105,8 @@ if(!$_SESSION) exit;
                         if(file_exists('C:/xampp/htdocs/parking-control/modules/customers-control/'.$Url[0].'.php'))
                             require 'C:/xampp/htdocs/parking-control/modules/customers-control/'.$Url[0].'.php';   
 
+                        if(file_exists('C:/xampp/htdocs/parking-control/modules/contact/'.$Url[0].'.php'))
+                            require 'C:/xampp/htdocs/parking-control/modules/contact/'.$Url[0].'.php'; 
                     ?>
                 </div>
             </div>

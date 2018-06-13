@@ -5,6 +5,7 @@ if(!$_SESSION) exit;
 
 include "../class/connection.php";
 include "../class/customer.php";
+include "../class/plate.php";
 
 if($_POST['action'] == 'create'){
 
