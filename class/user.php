@@ -49,23 +49,20 @@ class User {
             return false;
         }
     }
-    public function update($id,$name,$cpf,$phone,$access){
+
+    public function delete($id){
         try{
             $connect = new Connection();
             $conn = $connect->getConnection();
-            $stmt = $conn->prepare("UPDATE USERS SET NAME='?', CPF='?', PHONE='?', ACCESS='?'' WHERE ID=? ");
-            $stmt->execute(array($name,$cpf,$phone,$access,$id));         
-            return TRUE;
+            $stmt = $conn->prepare("DELETE FROM USERS WHERE ID=? ");
+            $deleted = $stmt->execute(array($id));         
+            return $deleted;
 
         }catch(Exception $e){
             echo $e->getMessage();
             return false;
         }
     }
-
-
-
-
 
 }
 ?>

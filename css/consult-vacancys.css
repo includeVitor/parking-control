@@ -1,0 +1,22 @@
+#form-consult-vacancys{
+    width: 100%;
+    max-width: 550px;
+    margin:auto;
+}
+.modal-body{
+    width: 100%;
+    max-width: 350px;
+    margin:auto;
+}
+.modal-body span{
+    width:170px;
+}
+
+#table-consult{
+    width: 100%;
+    max-width: 800px;
+    margin:auto;
+}
+input[type= "date"]{
+    font-size:14px;
+}

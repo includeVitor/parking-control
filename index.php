@@ -27,21 +27,21 @@ if(!$_SESSION) exit;
                     <li class="active">
                         <a href="#vehicles-control" data-toggle="collapse" aria-expanded="false">
                             <i class="fas fa-car fa-lg"></i>
-                            Controle de Veículos
+                            Controle de Vagas
                         </a>
                         <ul class="collapse list-unstyled" id="vehicles-control">
-                            <li><a href="#">Cadastro</a></li>
-                            <li><a href="#">Consulta</a></li>
+                            <li><a href="\parking-control\create-vacancys">Cadastro</a></li>
+                            <li><a href="\parking-control\consult-vacancys">Consulta</a></li>
                         </ul>
                     </li>
                     <li class="active">
-                        <a href="#custumer-control" data-toggle="collapse" aria-expanded="false">
+                        <a href="#customers-control" data-toggle="collapse" aria-expanded="false">
                             <i class="fas fa-users fa-lg"></i>
                             Controle de Clientes
                         </a>
-                        <ul class="collapse list-unstyled" id="custumer-control">
-                            <li><a href="#">Cadastro</a></li>
-                            <li><a href="#">Consulta</a></li>
+                        <ul class="collapse list-unstyled" id="customers-control">
+                            <li><a href="\parking-control\create-customers">Cadastro</a></li>
+                            <li><a href="\parking-control\consult-customers">Consulta</a></li>
                         </ul>
                     </li>
                     <li class="active">
@@ -96,8 +96,15 @@ if(!$_SESSION) exit;
                 <div class="index-content">
                     <?php
                         $Url[1] = (empty($Url[1]) ? null : $Url[1]);
+                        
                         if(file_exists('C:/xampp/htdocs/parking-control/modules/admin-panel/'.$Url[0].'.php'))
-                        require 'C:/xampp/htdocs/parking-control/modules/admin-panel/'.$Url[0].'.php';
+                            require 'C:/xampp/htdocs/parking-control/modules/admin-panel/'.$Url[0].'.php';
+
+                        if(file_exists('C:/xampp/htdocs/parking-control/modules/vacancy-control/'.$Url[0].'.php'))
+                            require 'C:/xampp/htdocs/parking-control/modules/vacancy-control/'.$Url[0].'.php'; 
+                        
+                        if(file_exists('C:/xampp/htdocs/parking-control/modules/customers-control/'.$Url[0].'.php'))
+                            require 'C:/xampp/htdocs/parking-control/modules/customers-control/'.$Url[0].'.php';   
 
                     ?>
                 </div>

@@ -1,5 +1,4 @@
 <?php
-
 include "..\class\connection.php";
 
 $connect = new Connection();

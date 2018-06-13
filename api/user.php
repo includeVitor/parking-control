@@ -9,7 +9,7 @@ include "..\class\user.php";
 if($_POST['action'] == 'create'){
 
     $user = new User();
-    $inserted = $user->insertOrUpdate($_POST['email'], $_POST['name'], $_POST['password'], $_POST['cpf'],0);
+    $inserted = $user->insertOrUpdate($_POST['email'],'', $_POST['name'], $_POST['password'], $_POST['cpf'], 0);
     echo $inserted;
 }
 
@@ -31,7 +31,9 @@ if($_POST['action'] == 'update'){
 
 if($_POST['action'] == 'delete'){
 
-    echo $id;
+    $user = new User();
+    $deleted = $user->delete($_POST['id']);
+    echo $_POST['id'];
 }
     
     

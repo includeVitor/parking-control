@@ -1,7 +1,7 @@
-<form id="form-consult-users">
-    <link rel="stylesheet" type="text/css" href="\parking-control\css\consult-users.css">
-    <script src="\parking-control\scripts\consult-users.js"></script>
-    <h2 class="text-center">Consultar Usuários</h2>
+<form id="form-consult-customers">
+    <link rel="stylesheet" type="text/css" href="\parking-control\css\consult-customers.css">
+    <script src="\parking-control\scripts\consult-customers.js"></script>
+    <h2 class="text-center">Consultar Clientes</h2>
     <hr>
     <input type="text" id="cpf" class="form-control" placeholder="Cpf">
     <input type="text" id="name" class="form-control mt-2" placeholder="Nome">
@@ -9,10 +9,10 @@
     <button class="btn btn-primary mt-2" id="consult-user"> Consultar </button>
 </form>
 <div id="delete-succeed">
-    <p class="text-center mt-2">Usuário excluido com sucesso</p>
+    <p class="text-center mt-2">Cliente excluido com sucesso</p>
 </div>
 <div id="delete-failed">
-    <p class="text-center mt-2">Falha na exclusão dos usuários</p>
+    <p class="text-center mt-2">Falha na exclusão dos Clientes</p>
 </div>
 <div id="delete-failconn">
     <p class="text-center mt-2">Falha na conexão</p>
@@ -38,10 +38,10 @@
       <div class="modal-body">
 
         <div id="succeed">
-            <p>Usuário alterado com sucesso</p> 
+            <p>Cliente alterado com sucesso</p> 
         </div>
         <div id="failed">
-            <p>Não foi possível editar o usuário</p> 
+            <p>Não foi possível editar o Cliente</p> 
         </div>
         <div id="failconn">
             <p>Falha na conexão</p> 
