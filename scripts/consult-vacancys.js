@@ -83,7 +83,7 @@ $(function(){
         window.location.replace("/parking-control/");
     });
 
-    $("#update-user").click(function(){
+    $("#update-vacancy").click(function(){
         updateUser();
     });
 });

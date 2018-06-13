@@ -50,6 +50,20 @@ class Customer {
             return false;
         }
     }
+
+    public function delete($id){
+        try{
+            $connect = new Connection();
+            $conn = $connect->getConnection();
+            $stmt = $conn->prepare("DELETE FROM CUSTOMERS WHERE ID=? ");
+            $deleted = $stmt->execute(array($id));         
+            return $deleted;
+
+        }catch(Exception $e){
+            echo $e->getMessage();
+            return false;
+        }
+    }
 }
 
 ?>

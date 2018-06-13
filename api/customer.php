@@ -21,5 +21,21 @@ if($_POST['action'] == 'consult'){
 
 }
 
+if($_POST['action'] == 'update'){
+
+    $customer = new Customer();
+    $inserted = $customer->insertOrUpdate($_POST['email'], $_POST['name'], $_POST['cpf'], $_POST['id']);
+    echo $inserted;
+
+}
+
+
+if($_POST['action'] == 'delete'){
+
+    $customer = new Customer();
+    $deleted = $customer->delete($_POST['id']);
+    echo $_POST['id'];
+}
+
 
 ?>

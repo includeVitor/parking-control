@@ -33,7 +33,7 @@ if($_POST['action'] == 'delete'){
 
     $user = new User();
     $deleted = $user->delete($_POST['id']);
-    echo $_POST['id'];
+    echo $deleted;
 }
     
     

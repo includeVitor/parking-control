@@ -1,6 +1,6 @@
-function deleteUser(id){
+function deleteCustomer(id){
     if(confirm("[Operação sem volta] Deseja mesmo excluir este usuário ?"))
-        $.post("api/user.php",{action:'delete',id: id})
+        $.post("api/customer.php",{action:'delete',id: id})
         .done(function(data){
             if(data){
                 $("#delete-succeed").show();
@@ -17,7 +17,6 @@ function deleteUser(id){
 function atualizaTable() {   
     $.post("api/customer.php",{ action: "consult", name: $("#name").val(), cpf : $("#cpf").val()})
         .done(function(data){
-            alert(data);
             $("table tbody").remove();
             $("#table-consult").show();
             data = $.parseJSON(data);
@@ -29,7 +28,7 @@ function atualizaTable() {
                             "<td>"
                                 +"<button class='btn btn-primary' data-toggle='modal' data-target='#edit-delete' onClick=$('#modal-id').val("+data[i].id+");$('#modal-email').val('"+data[i].email+"');$('#modal-name').val('"+data[i].name+"');$('#modal-cpf').val('"+data[i].cpf+"') ><i class='fas fa-edit fa-lg'></i></button>"
                                 +'&ensp;'
-                                +"<button class='btn btn-primary' onClick='deleteUser("+data[i].id+")'><i class='fas fa-trash-alt fa-lg'></button></i>"+
+                                +"<button class='btn btn-primary' onClick='deleteCustomer("+data[i].id+")'><i class='fas fa-trash-alt fa-lg'></button></i>"+
                             "</td>"+
                             "<td>"+data[i].name+"</td>"+
                             "<td>"+data[i].cpf+"</td>"+
@@ -68,7 +67,7 @@ $(function(){
     $("#failconn").hide();
     $("#table-consult").hide();
 
-    $('#form-consult-users').submit(function() {
+    $('#form-consult-customers').submit(function() {
         atualizaTable();
         return false;
     });
