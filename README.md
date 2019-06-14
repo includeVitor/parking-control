@@ -1,14 +1,14 @@
-#Estacionamento Inteligente - parking-control
+# Estacionamento Inteligente - parking-control
 
-#url amigavel
+# url amigavel
 
-#POO
+# POO
 
-#mobile-first
+# mobile-first
 
-#boostrap 4.1
+# boostrap 4.1
 
-#git control
+# git control
 
 
-#modular
+# modular
